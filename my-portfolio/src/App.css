@@ -35,8 +35,31 @@ body {
 }
 
 /* Education */
-.education-item {
-  margin-bottom: 20px;
+.education-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.education-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 48%;
+}
+
+.education-logo {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.education-details {
+  text-align: left;
 }
 
 /* Experience */

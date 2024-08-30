@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
+import { motion } from 'framer-motion';
 import profilePic from './LinkedIn_profile.jpeg'; // Add a professional profile picture
+import uciLogo from './UCI_Logo.jpg'; // Ensure you have this image in your src folder
+import bmsLogo from './BMSCE_Logo.jpeg'; // Ensure you have this image in your src folder
 
 function App() {
   const projects = [
@@ -33,29 +36,66 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={profilePic} alt="Sushmitha Jagannath" className="profile-pic" />
-        <h1>Sushmitha Jagannath</h1>
-        <p>Software Developer | Passionate about building scalable software and AI-driven applications.</p>
+        <motion.img
+          src={profilePic}
+          alt="Sushmitha Jagannath"
+          className="profile-pic"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        />
+        <motion.h1
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          Sushmitha Jagannath
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          Software Developer | Passionate about building scalable software and AI-driven applications.
+        </motion.p>
       </header>
 
       <section id="about" className="section">
-        <h2>About Me</h2>
-        <p>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          About Me
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
           I am currently pursuing a Master’s in Computer Science at UCI, specializing in software development and AI. I have a solid background in building full-stack applications and deploying them on cloud platforms like AWS.
-        </p>
+        </motion.p>
       </section>
 
       <section id="education" className="section">
         <h2>Education</h2>
-        <div className="education-item">
-          <h3>University of California, Irvine</h3>
-          <p>Master's in Computer Science (Sep 2023 – Dec 2024)</p>
-          <p>GPA: 3.95/4.00</p>
-        </div>
-        <div className="education-item">
-          <h3>B.M.S College of Engineering, Bangalore</h3>
-          <p>Bachelor of Engineering in Information Science (Jun 2017 – Mar 2021)</p>
-          <p>GPA: 3.68/4.00</p>
+        <div className="education-grid">
+          <div className="education-card">
+            <img src={uciLogo} alt="UCI Logo" className="education-logo" />
+            <div className="education-details">
+              <h3>University of California, Irvine</h3>
+              <p>Master's in Computer Science (Sep 2023 – Dec 2024)</p>
+              <p>GPA: 3.95/4.00</p>
+            </div>
+          </div>
+          <div className="education-card">
+            <img src={bmsLogo} alt="BMS College Logo" className="education-logo" />
+            <div className="education-details">
+              <h3>B.M.S College of Engineering, Bangalore</h3>
+              <p>Bachelor of Engineering in Information Science (Jun 2017 – Mar 2021)</p>
+              <p>GPA: 3.68/4.00</p>
+            </div>
+          </div>
         </div>
       </section>
 
