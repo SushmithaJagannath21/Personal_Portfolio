@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { motion } from 'framer-motion';
-import profilePic from './LinkedIn_profile.jpeg'; // Add a professional profile picture
-import uciLogo from './UCI_Logo.jpg'; // Ensure you have this image in your src folder
-import bmsLogo from './BMSCE_Logo.jpeg'; // Ensure you have this image in your src folder
+import profilePic from './LinkedIn_profile.jpeg';
+import uciLogo from './UCI_Logo.jpg';
+import bmsLogo from './BMSCE_Logo.jpeg';
 
 function App() {
   const projects = [
